@@ -1,0 +1,9 @@
+
+.firstsection{
+    background-color: #FAFAFA;
+}
+@media (max-width:600px) {
+.first-section-text{
+    padding-inline: 8%;
+}
+}
