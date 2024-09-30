@@ -1,0 +1,27 @@
+.mobileview{
+    display: none;
+}
+nav ul{
+    position: relative !important;
+}
+.sidebar{
+    display: none;
+}
+@media (max-width: 800px) {
+    .navpage{
+        display: none !important;
+    }
+    .mobileview{
+        display: block;
+    }
+    .sidebar{
+        position: block;
+        top: 1px;
+        transform: translateX(1800px);
+        z-index: 2;
+        transition: transform 0.3s ease-in-out;
+    }
+    .donatebtn{
+        border-radius: 0px I !important;
+    }
+}
