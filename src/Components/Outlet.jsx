@@ -4,11 +4,11 @@ import Header from './Header'
 import { Outlet } from 'react-router-dom'
 function Layout() {
   return (
-    <>
-        <Header/>
-        <Outlet/>
-        <Footer/>
-    </>
+    <div className="w-full">
+        <Header />
+        <Outlet />
+        <Footer />
+    </div>
   )
 }
 
