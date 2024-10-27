@@ -15,38 +15,40 @@ function Homepage() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [direction, setDirection] = useState('next'); // For slide direction
 
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000); // Automatically move to the next slide every 5 seconds
+    }, 3000); // Automatically move to the next slide every 5 seconds
 
     return () => clearInterval(interval); // Cleanup interval on unmount
   }, [currentIndex]);
 
-  const handleSlideChange = (newIndex) => {
+  const handleSlideChange = (newIndex, dir) => {
     setIsTransitioning(true);
+    setDirection(dir);
     setTimeout(() => {
       setCurrentIndex(newIndex);
       setIsTransitioning(false);
-    }, 500); // Time for the transition (matches CSS transition duration)
+    }, 300); // Time for the transition (matches CSS transition duration)
   };
 
   const nextSlide = () => {
-    handleSlideChange((currentIndex + 1) % campaignData.length);
+    handleSlideChange((currentIndex + 1) % campaignData.length, 'next');
   };
 
   const prevSlide = () => {
-    handleSlideChange(currentIndex === 0 ? campaignData.length - 1 : currentIndex - 1);
+    handleSlideChange(currentIndex === 0 ? campaignData.length - 1 : currentIndex - 1, 'prev');
   };
 
   return (
-    <div className="homepage-container w-full flex flex-col  py-8 gap-8 bg-white mt-10">
+    <div className="homepage-container w-full flex flex-col py-8 gap-8 bg-white mt-10">
       <h1 className="heading text-5xl text-center font-light">
         <span className="text-gray-700 font-medium">Together</span> We Make a <span className="text-black font-bold">Difference</span>
       </h1>
 
-      <div className="subtext  ml-[390px]  text-lg text-gray-500 max-w-4xl">
+      <div className="subtext ml-[390px] text-lg text-gray-500 max-w-4xl">
         <p>Real Happiness Of Life Foundation for social change and inclusion works for the social</p>
         <p>development and integration of underprivileged individuals, groups, and communities in India.</p>
       </div>
@@ -77,67 +79,25 @@ function Homepage() {
           <span className="text-gray-700 font-medium">Donate to one of our </span>
           <span className="text-pink-500 font-bold">campaigns</span>
         </h1>
+        <p className='flex items-center justify-center mt-5 font-light text-[20px] tex-[#D9D9D9]'>By donating, you take a step towards creating a better world. Every rupee counts!</p>
 
         <div className="relative w-full overflow-hidden mt-7">
-          <div className="flex justify-center items-center space-x-3 ">
-            {/* Previous card preview */}
-            <div
-              className={`w-[25%]  opacity-50 transform transition-transform duration-500 ${isTransitioning ? 'scale-75' : 'scale-90'} overflow-hidden`}
-              onClick={prevSlide}
-              style={{ clipPath: 'inset(0 0 0 50%)' }} // Show only the right part of the previous card
-            >
-              <CampaignCard campaign={campaignData[currentIndex === 0 ? campaignData.length - 1 : currentIndex - 1]} />
-            </div>
-
-            {/* Current Card */}
-            <div
-              className={`w-[55%] transform transition-transform duration-500 ${isTransitioning ? 'scale-95 opacity-50' : 'scale-100 opacity-100'}`}
-            >
+          <div className={`flex justify-center items-center transition-transform duration-500 ${isTransitioning ? (direction === 'next' ? 'translate-x-[-100%]' : 'translate-x-[100%]') : ''}`}>
+            <div className="w-[45%] transform transition-transform duration-300">
               <CampaignCard campaign={campaignData[currentIndex]} />
             </div>
-
-            {/* Next card preview */}
-            <div
-              className={`w-[25%]  opacity-50 transform transition-transform duration-500 ${isTransitioning ? 'scale-75' : 'scale-90'} overflow-hidden`}
-              onClick={nextSlide}
-              style={{ clipPath: 'inset(0 50% 0 0)' }} // Show only the left part of the next card
-            >
-              <CampaignCard campaign={campaignData[(currentIndex + 1) % campaignData.length]} />
-            </div>
           </div>
-
-          {/* Left arrow button */}
-          {/* <button
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-indigo-600 text-white p-2 rounded-full shadow-md focus:outline-none transition duration-200 hover:bg-indigo-700"
-            onClick={prevSlide}
-          >
-            <span className="material-icons">chevron_left</span>
-          </button> */}
-
-          {/* Right arrow button */}
-          {/* <button
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-indigo-600 text-white p-2 rounded-full shadow-md focus:outline-none transition duration-200 hover:bg-indigo-700"
-            onClick={nextSlide}
-          >
-            <span className="material-icons">chevron_right</span>
-          </button> */}
         </div>
+
+
       </div>
 
-      {/* medicalimpact */}
-      <Medicalemg/>
-
-      {/* Causes we support */}
-      <Causessupport/>
-
-      {/* Testimonals */}
-      <Testimonials/>
-
-      {/* Assure you section */}
+      {/* Other components */}
+      <Medicalemg />
+      <Causessupport />
+      <Testimonials />
       <Assureyou />
-
-      {/* partners section */}
-      <Partners/>
+      <Partners />
     </div>
   );
 }
