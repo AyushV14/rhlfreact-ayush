@@ -1,10 +1,24 @@
 /* General Styles */
+
+nav {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow at the bottom */
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+  position: relative; /* Positioning context for shadow */
+  z-index: 10; /* Ensure the navbar is above other elements */
+}
+
+nav:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
 body {
   overflow-x: hidden; /* Ensure no horizontal scrolling */
+
 }
 .navpage {
   position: relative;
+
 }
+
 
 .navpage .group:hover .group-hover\:block {
   display: block;
