@@ -131,6 +131,30 @@
   }
 }
 
+.marquee-container {
+  overflow: hidden; /* Hide overflow */
+  white-space: nowrap; /* Keep content on one line */
+  width: 100%; /* Ensure it takes full width */
+}
+
+.marquee {
+  display: inline-flex; /* Use inline-flex for horizontal arrangement */
+  animation: scroll 25s linear infinite; /* Adjust speed as needed */
+}
+
+.logo {
+  width: 170px; /* Adjust as needed */
+  margin-right: 0; /* Remove any right margin */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Start from the beginning */
+  }
+  100% {
+    transform: translateX(-500%); /* Move left by half the total width of the content */
+  }
+}
 
 
 

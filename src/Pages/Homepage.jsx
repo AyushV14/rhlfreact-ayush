@@ -83,7 +83,7 @@ function Homepage() {
 
         <div className="relative w-full overflow-hidden mt-7">
           <div className={`flex justify-center items-center transition-transform duration-500 ${isTransitioning ? (direction === 'next' ? 'translate-x-[-100%]' : 'translate-x-[100%]') : ''}`}>
-            <div className="w-[45%] transform transition-transform duration-300">
+            <div className="w-[40%] transform transition-transform duration-300">
               <CampaignCard campaign={campaignData[currentIndex]} />
             </div>
           </div>
