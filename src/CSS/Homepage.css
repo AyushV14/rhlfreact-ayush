@@ -156,6 +156,58 @@
   }
 }
 
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.scroll-left {
+  left: 80px;
+}
+
+.scroll-right {
+  right: 30px;
+}
+
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.info-transition {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.info-visible {
+  opacity: 1;
+}
 
 
 
