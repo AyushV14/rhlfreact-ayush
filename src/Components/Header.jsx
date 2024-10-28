@@ -1,140 +1,119 @@
-import React, { useRef,  useState } from 'react'
-import Logo from '../assets/images/LOGO1.png'
-import '../CSS/Header.css'
-import { NavLink } from 'react-router-dom'
+import React, { useRef, useState, useEffect } from 'react';
+import Logo from '../assets/images/LOGO1.png';
+import { NavLink, useLocation } from 'react-router-dom';
+import '../CSS/Header.css';
 
 function Header() {
-  const [navcount, setnavcount] = useState(0)
-  const navdiv=useRef(null)
-  const hamburger=useRef(null)
-  function handlenav() {
-    if (navdiv.current) {
-      if(navcount==0){
-        navdiv.current.style.display='block'
-        navdiv.current.style.transform = 'translateX(0px)';
-        setnavcount(1)
-        console.log(navcount)
-      }
-      else{
-        navdiv.current.style.transform = 'translateX(1800px)'
-        setnavcount(0)
-        console.log(navcount)
+  const [navcount, setnavcount] = useState(0);
+  const navdiv = useRef(null);
+  const hamburger = useRef(null);
+  const location = useLocation();
+
+  const handlenav = () => {
+    if (navcount === 0) {
+      navdiv.current.style.display = 'block'; // Ensure it's set to block for the first time
+      navdiv.current.style.transform = 'translateX(0)'; // Directly show the sidebar
+      setnavcount(1);
+      document.body.style.overflowX = 'hidden'; // Prevent horizontal scrolling
+    } else {
+      navdiv.current.style.transform = 'translateX(100%)';
+      setnavcount(0);
+      document.body.style.overflowX = 'hidden'; // Allow horizontal scrolling again
+    }
+  };
+
+  // Close sidebar when clicking outside of it
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (navdiv.current && !navdiv.current.contains(event.target) && !hamburger.current.contains(event.target)) {
+        navdiv.current.style.transform = 'translateX(100%)';
+        setnavcount(0);
       }
     }
-    console.log('Sidebar clicked!'); // Correct log statement
-  }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [navdiv, hamburger]);
+
+  // Close sidebar when navigating
+  useEffect(() => {
+    if (navcount === 1) {
+      navdiv.current.style.transform = 'translateX(100%)';
+      setnavcount(0);
+    }
+  }, [location]);
+
+  const closeSidebar = () => {
+    navdiv.current.style.transform = 'translateX(100%)';
+    setnavcount(0);
+    navdiv.current.style.display = 'none'; // Hide the sidebar after closing
+  };
+
   return (
-    <nav className='w-full px-7'>
-      <ul className='w-full flex justify-around items-center'>
-        <div className='w-1/5 z-10'>
-          <li><img src={Logo} alt="" /></li>
+    <nav className='w-full px-10 pt-3 max-md:mr-10 max-md:mb-5'>
+      <ul className='w-full flex justify-between items-center'>
+        <div className='w-[100%] z-10 md:w-1/5 max-md:mr-10'>
+          <li><img src={Logo} alt="Logo" className='w-[110px] h-auto max-md:w-24 max-md:h-20' /></li>
         </div>
-        <div className='navpage flex items-center gap-3 font-medium'>
-      <NavLink 
-        to="/" 
-        className={({ isActive }) => `relative text-black`}
-      >
-        {({ isActive }) => (
-          <span className="relative">
-            Home
-            {isActive && <span className="absolute left-0 -bottom-1 h-0.5 bg-black w-full" />}
-          </span>
-        )}
-      </NavLink>
-
-      <NavLink 
-        to="/about" 
-        className={({ isActive }) => `relative text-black`}
-      >
-        {({ isActive }) => (
-          <span className="relative">
-            About us
-            {isActive && <span className="absolute left-0 -bottom-1 h-0.5 bg-black w-full" />}
-          </span>
-        )}
-      </NavLink>
-
-      <NavLink 
-        to="/programmes" 
-        className={({ isActive }) => `relative text-black`}
-      >
-        {({ isActive }) => (
-          <span className="relative">
-            Programmes
-            {isActive && <span className="absolute left-0 -bottom-1 h-0.5 bg-black w-full" />}
-          </span>
-        )}
-      </NavLink>
-
-      <NavLink 
-        to="/clinic" 
-        className={({ isActive }) => `relative text-black`}
-      >
-        {({ isActive }) => (
-          <span className="relative">
-            Our Clinics
-            {isActive && <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-black " />}
-          </span>
-        )}
-      </NavLink>
-
-      <NavLink 
-        to="/getinvolved" 
-        className={({ isActive }) => `relative text-black`}
-      >
-        {({ isActive }) => (
-          <span className="relative">
-            Get Involved
-            {isActive && <span className="absolute left-0 -bottom-1 h-0.5 bg-black w-full" />}
-          </span>
-        )}
-      </NavLink>
-
-      <NavLink 
-        to="/media" 
-        className={({ isActive }) => `relative text-black`}
-      >
-        {({ isActive }) => (
-          <span className="relative">
-            Media
-            {isActive && <span className="absolute left-0 -bottom-1 h-0.5 bg-black w-full" />}
-          </span>
-        )}
-      </NavLink>
-
-      <NavLink 
-        to="/contact" 
-        className={({ isActive }) => `relative text-black`}
-      >
-        {({ isActive }) => (
-          <span className="relative">
-            Contact Us
-            {isActive && <span className="absolute left-0 -bottom-1 h-0.5 bg-black w-full" />}
-          </span>
-        )}
-      </NavLink>
-    </div>
-        <div>
-          <li className='text-center donatebtn cursor-pointer font-bold px-3 py-1 bg-custompink text-white rounded-3xl'>Donate Now</li>
+        <div className='navpage hidden md:flex items-center gap-4 font-medium ml-72'>
+          <NavLink to="/" className={({ isActive }) => `relative text-black ${isActive ? 'active' : ''}`} onClick={closeSidebar}>Home</NavLink>
+          <NavLink to="/about" className={({ isActive }) => `relative text-black ${isActive ? 'active' : ''}`} onClick={closeSidebar}>About us</NavLink>
+          <div className="relative group">
+            <NavLink to="/programmes" className={({ isActive }) => `relative text-black ${isActive ? 'active' : ''}`} onClick={closeSidebar}>Programmes</NavLink>
+            <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg rounded p-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-bold">Main Programmes</h4>
+                  <ul className="space-y-1">
+                    <li><NavLink to="/programmes/emergency-medical-support" className="block px-4 py-2 text-black hover:bg-gray-100" onClick={closeSidebar}>Emergency Medical Support</NavLink></li>
+                    <li><NavLink to="/programmes/mission-zero-hunger" className="block px-4 py-2 text-black hover:bg-gray-100" onClick={closeSidebar}>Mission Zero Hunger</NavLink></li>
+                    <li><NavLink to="/programmes/mission-education" className="block px-4 py-2 text-black hover:bg-gray-100" onClick={closeSidebar}>Mission Education Program</NavLink></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-bold">Health & Wellness</h4>
+                  <ul className="space-y-1">
+                    <li><NavLink to="/programmes/public-health-and-nutrition" className="block px-4 py-2 text-black hover:bg-gray-100" onClick={closeSidebar}>Public Health and Nutrition</NavLink></li>
+                    <li><NavLink to="/programmes/mission-smile" className="block px-4 py-2 text-black hover:bg-gray-100" onClick={closeSidebar}>Mission Smile Program</NavLink></li>
+                    <li><NavLink to="/programmes/disability-elimination" className="block px-4 py-2 text-black hover:bg-gray-100" onClick={closeSidebar}>Disability Elimination Program</NavLink></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <NavLink to="/clinic" className={({ isActive }) => `relative text-black ${isActive ? 'active' : ''}`} onClick={closeSidebar}>Our Clinics</NavLink>
+          <NavLink to="/getinvolved" className={({ isActive }) => `relative text-black ${isActive ? 'active' : ''}`} onClick={closeSidebar}>Get Involved</NavLink>
+          <NavLink to="/media" className={({ isActive }) => `relative text-black ${isActive ? 'active' : ''}`} onClick={closeSidebar}>Media</NavLink>
+          <NavLink to="/contact" className={({ isActive }) => `relative text-black ${isActive ? 'active' : ''}`} onClick={closeSidebar}>Contact Us</NavLink>
         </div>
-        <div className="mobileview z-10" ref={hamburger} onClick={handlenav}>
+
+          
+
+         <button className="flex items-center bg-white border-[1px] border-gray-300 hover:border-gray-400 rounded-full px-4 py-2 shadow-sm hover:shadow-lg transition duration-300 max-md:mr-2 max-md:px-4 max-md:py-2">
+          <span className="text-red-500 text-xl mr-2">❤️</span>
+          <span className="text-black font-bold text-lg max-md:text-base">DONATE</span>
+          </button>
+
+        <div className="mobileview z-10 block lg:hidden" ref={hamburger} onClick={handlenav}>
           <i className="fa-solid fa-bars text-3xl"></i>
         </div>
-        <div className='sidebar h-screen bg-white absolute w-screen ' ref={navdiv} >
-            <ul className='flex h-full w-full flex-col justify-center items-center space-y-6 text-black text-xl pl-8'>
-            <li><NavLink to="/">Home</NavLink></li>
-            <li className='text-center'><NavLink to="/about">About us</NavLink></li>
-            <li><NavLink to="/programmes">Programmes</NavLink></li>
-            <li className='text-center'><NavLink to="/clinics">Our Clinics</NavLink></li>
-            <li className='text-center'><NavLink to="/get-involved">Get Involved</NavLink></li>
-            <li><NavLink to="/media">Media</NavLink></li>
-            <li className='text-center'><NavLink to="/contact">Contact Us</NavLink></li>
-            </ul> 
-        </div>
 
+        <div className='sidebar h-[80%] mt-[550px] bg-white absolute w-screen transform translate-x-full transition-transform duration-300 ease-in-out' ref={navdiv}>
+          <ul className='flex h-full w-full flex-col justify-center items-center space-y-6 text-black text-xl pl-8'>
+            <li><NavLink to="/" onClick={closeSidebar}>Home</NavLink></li>
+            <li className='text-center'><NavLink to="/about" onClick={closeSidebar}>About us</NavLink></li>
+            <li><NavLink to="/programmes" onClick={closeSidebar}>Programmes</NavLink></li>
+            <li className='text-center'><NavLink to="/clinic" onClick={closeSidebar}>Our Clinics</NavLink></li>
+            <li className='text-center'><NavLink to="/getinvolved" onClick={closeSidebar}>Get Involved</NavLink></li>
+            <li><NavLink to="/media" onClick={closeSidebar}>Media</NavLink></li>
+            <li className='text-center'><NavLink to="/contact" onClick={closeSidebar}>Contact Us</NavLink></li>
+          </ul>
+        </div>
       </ul>
     </nav>
-)
+  );
 }
 
-export default Header
+export default Header;

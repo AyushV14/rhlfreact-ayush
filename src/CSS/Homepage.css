@@ -1,9 +1,162 @@
+.firstsection {
+  background-color: #FAFAFA;
+}
 
-.firstsection{
-    background-color: #FAFAFA;
-}
-@media (max-width:600px) {
-.first-section-text{
+@media (max-width: 600px) {
+  .first-section-text {
     padding-inline: 8%;
+  }
 }
+
+
+
+.images-container {
+  position: relative;
+  width: 100%;
+  margin-top: 2.5rem;
+  overflow: hidden;
+  height: auto;
+  padding-bottom: 100px;
 }
+
+.images-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+
+.image-overlap-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 250px;
+}
+
+.tabs-img {
+  width: 100%;
+  height: auto;
+}
+
+.children-img {
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: auto;
+  z-index: 10;
+}
+
+.campaign-card {
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  width: 100%; /* Ensure the card is full width */
+}
+
+.campaign-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%; /* Make sure the details take full width */
+}
+
+.campaign-info {
+  display: flex;
+  justify-content: space-between;
+  text-align: start;
+}
+
+.campaign-info .info-item {
+  margin: 0 10px; /* Increase gap between items */
+}
+
+.donate-button {
+  background-color: #FF4081;
+  color: white;
+  padding: 10px 15px; /* Adjust for reduced width */
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+  background-color: #e1356d;
+  padding: 8px 12px;
+  transition: 0.1s ease; 
+}
+
+.share-button {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 8px 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.share-button:hover {
+  color: #e1356d;
+}
+
+.header {
+  font-size: 12px;
+}
+
+/* Optional: To enforce two lines on description */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+  .campaign-card {
+    flex-direction: column; /* Stack on smaller screens */
+  }
+
+  .campaign-details {
+    width: auto; /* Allow details to take full width in stacked layout */
+  }
+
+  .campaign-info {
+    flex-direction: column; /* Stack info items on smaller screens */
+    align-items: flex-start; /* Align items to the start */
+  }
+}
+
+.marquee-container {
+  overflow: hidden; /* Hide overflow */
+  white-space: nowrap; /* Keep content on one line */
+  width: 100%; /* Ensure it takes full width */
+}
+
+.marquee {
+  display: inline-flex; /* Use inline-flex for horizontal arrangement */
+  animation: scroll 25s linear infinite; /* Adjust speed as needed */
+}
+
+.logo {
+  width: 170px; /* Adjust as needed */
+  margin-right: 0; /* Remove any right margin */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Start from the beginning */
+  }
+  100% {
+    transform: translateX(-500%); /* Move left by half the total width of the content */
+  }
+}
+
+
+
+
+
