@@ -139,11 +139,11 @@
 
 .marquee {
   display: inline-flex; /* Use inline-flex for horizontal arrangement */
-  animation: scroll 25s linear infinite; /* Adjust speed as needed */
+  animation: scroll 40s linear infinite; /* Adjust speed as needed */
 }
 
 .logo {
-  width: 170px; /* Adjust as needed */
+  width: 150px; /* Adjust as needed */
   margin-right: 0; /* Remove any right margin */
 }
 
@@ -207,6 +207,10 @@
 
 .info-visible {
   opacity: 1;
+}
+
+.campaign-card {
+  transition: transform 0.5s ease-in-out;
 }
 
 
