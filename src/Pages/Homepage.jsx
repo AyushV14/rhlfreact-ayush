@@ -4,8 +4,8 @@ import campaignData from '../assets/data/campaigndonate.json';
 import CampaignCard from './homecomponents/CampaignCard'; 
 import Assureyou from './homecomponents/Assureyou';
 import Medicalemg from './homecomponents/Medicalemg';
-import Testimonials from './homecomponents/Testimonials';
 import Partners from './homecomponents/Partners';
+import Category from './homecomponents/Category';
 
 function Homepage() {
   const importImage = (imageName) => {
@@ -79,11 +79,12 @@ function Homepage() {
           </div>
         </div>
       </div>
-
-      <Medicalemg />
-      <Testimonials />
-      <Assureyou />
-      <Partners />
+      <div className='flex flex-col pl-24 pr-16 gap-20'>
+          <Medicalemg />
+          <Category />
+          {/* <Assureyou /> */}
+          <Partners />
+      </div>
     </div>
   );
 }

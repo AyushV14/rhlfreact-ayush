@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link
+import { Link } from 'react-router-dom'; 
 import '../../CSS/MedicalEmg.css';
 import social1 from '../../assets/images/Causes/social/social1.png';
 import social2 from '../../assets/images/Causes/social/social2.png';
@@ -40,13 +40,13 @@ const emergencyData = [
 
 export default function MedicalEmergency() {
   return (
-    <div className='flex flex-col gap-2 pl-16 pr-16'>
+    <div className='flex flex-col gap-2'>
       <div className='flex items-center justify-between'>
         <div className="section-header ml-24">
           <div className="section-straight"></div>
           <p className="section-head">Medical Emergency</p>
         </div>
-        <Link className="view-all-link" to="/clinic">View All →</Link> {/* Updated Link */}
+        <Link className="view-all-link" to="/clinic">View All →</Link> 
       </div>
       
       <div className='flex flex-wrap gap-10'> 
