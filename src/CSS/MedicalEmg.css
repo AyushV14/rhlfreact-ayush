@@ -133,6 +133,7 @@
     font-weight: 600;
     display: flex;
     align-items: center;
+    
 }
 
 .view-all-link:hover {
@@ -145,9 +146,79 @@
     gap: 10px;
     justify-content: center;
 }
+.cardcont {
+    display: flex;                  /* Enable flexbox layout */
+    overflow-x: auto;              /* Allow horizontal scrolling */
+    padding: 0 16px;               /* Padding for aesthetics */
+    gap: 10px;                     /* Add gap between cards */
+}
+
+.emergency-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 350px;              /* Set a max width for cards */
+    flex: 0 0 auto;                /* Prevent shrinking */
+    background: #fff;
+}
+
 
 @media (max-width: 768px) {
-    .emergency-card {
-        max-width: 100%;
+    .cardcont {
+        overflow-x: auto; /* Enable horizontal scrolling */
+        padding: 0 16px; /* Optional padding for aesthetics */
+        
     }
+
+    .emergency-card {
+        max-width: 350px; /* Reduce card width */
+        flex: 0 0 auto; /* Prevent the card from shrinking */
+        margin: 0 10px; /* Add horizontal margin */
+    }
+
+    .emergency-card_image {
+        height: 150px; /* Reduce image height */
+    }
+
+    .emergency-card_title {
+        font-size: 16px; /* Smaller title font size */
+    }
+
+    .emergency-card_author {
+        font-size: 12px; /* Smaller author font size */
+    }
+
+    .emergency-card_statsWrapper {
+        flex-direction: column; /* Stack stats vertically */
+        align-items: flex-start; /* Align stats to the start */
+    }
+
+    .emergency-card_stats {
+        margin-top: 8px; /* Adjust margin for stats */
+    }
+
+    .emergency-card_shareButton,
+    .emergency-card_donateButton {
+        padding: 8px 20px; /* Reduce padding */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .dk-progress-bar_backgroundBar {
+        height: 6px; /* Reduce height of the progress bar */
+    }
+    .section-header{
+        margin-left: 100px;
+    }
+    .view-all-link{
+        margin-right: 120px;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .emergency-card {
+        max-width: 300px;          /* Further reduce max-width for mobile */
+        margin: 0 10px;             /* Adjust margins */
+    }
+
+
 }

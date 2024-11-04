@@ -40,16 +40,16 @@ const emergencyData = [
 
 export default function MedicalEmergency() {
   return (
-    <div className='flex flex-col gap-2'>
+    <div className='flex flex-col gap-2 '>
       <div className='flex items-center justify-between'>
-        <div className="section-header ml-24">
+        <div className="section-header md:ml-24  ">
           <div className="section-straight"></div>
           <p className="section-head">Medical Emergency</p>
         </div>
         <Link className="view-all-link" to="/clinic">View All →</Link> 
       </div>
       
-      <div className='flex flex-wrap gap-10'> 
+      <div className='flex cardcont md:gap-10 justify-center items-center '> 
         {emergencyData.map((emergency) => (
           <div className="emergency-card" key={emergency.id}>
             <div className="emergency-card_mainSection">

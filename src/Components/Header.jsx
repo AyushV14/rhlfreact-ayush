@@ -100,7 +100,7 @@ function Header() {
           <i className="fa-solid fa-bars text-3xl"></i>
         </div>
 
-        <div className='sidebar h-[80%] mt-[550px] bg-white absolute w-screen transform translate-x-full transition-transform duration-300 ease-in-out' ref={navdiv}>
+        <div className='sidebar h-[400px] mt-[500px]  bg-white absolute w-screen transform translate-x-full transition-transform duration-300 ease-in-out' ref={navdiv}>
           <ul className='flex h-full w-full flex-col justify-center items-center space-y-6 text-black text-xl pl-8'>
             <li><NavLink to="/" onClick={closeSidebar}>Home</NavLink></li>
             <li className='text-center'><NavLink to="/about" onClick={closeSidebar}>About us</NavLink></li>
