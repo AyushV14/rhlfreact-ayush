@@ -13,7 +13,7 @@ function Footer() {
     <div className='footer-container'>
 <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 p-4 max-md:gap-20">
   <div className="section-1 mt-8">
-    <h3 className="section-title text-xl font-bold max-md:ml-20">Address</h3>
+    <h3 className="section-title text-xl font-bold max-md:ml-10">Address</h3>
     <div className='details mb-4 text-start max-md:text-center  max-md:ml-1'>
       <p className='text-gray-800 leading-relaxed'>
         H.no. 4453, Sathe Nagar near Manoj Kirana Store Narpoli, Bhiwandi, Thane, Maharashtra-421305
@@ -34,8 +34,8 @@ function Footer() {
   <div className='right-section flex flex-col justify-between mt-12 '>
     <div className='flex flex-col md:flex-row justify-between gap-16'>
       <div className="section-2 text-start">
-        <h3 className='section-title font-bold text-xl max-md:ml-20 '>Get in Touch!</h3>
-        <div className="locationdetails space-y-2 max-md:ml-5">
+        <h3 className='section-title font-bold text-xl max-md:ml-10 '>Get in Touch!</h3>
+        <div className="locationdetails space-y-2 max-md:ml-1">
           <p className='thane flex items-center cursor-pointer'>
             <i className="fa-solid fa-location-dot text-custompink w-5 mr-2"></i>
             <span className='text-black hover:text-gray-400 transition-colors duration-300 location text-sm'>
@@ -54,8 +54,8 @@ function Footer() {
       </div>
 
       <div className="section-3 text-start">
-        <h3 className='section-title font-bold text-xl max-md:ml-20  '>Quick Links</h3>
-        <div className='space-y-2  lg:text-start flex flex-col max-md:ml-3  max-md:
+        <h3 className='section-title font-bold text-xl max-md:ml-10  '>Quick Links</h3>
+        <div className='space-y-2  lg:text-start flex flex-col max-md:ml-1  max-md:
         text-center'>
           {["Privacy Policy", "Terms & Condition", "Refund Policy", "Child Protection Policy", "Posh Policy", "Employee Login"].map(link => (
             <p className='text-black hover:text-gray-400 transition-colors duration-300 cursor-pointer ' key={link}>
@@ -65,7 +65,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="subscribe-form ">
+      <div className="subscribe-form">
         <h3 className='section-title font-bold text-xl  '>Keep Helping Stay Updated.</h3>
         <form className="flex flex-col space-y-2">
           <input type="text" placeholder="First Name" className="input-field" />

@@ -8,7 +8,7 @@ import Clinic from '../Clinic';
 const emergencyData = [
   {
     id: 1,
-    title: "This Man With Elephant Foot Needs Support, Help Him Get Surgery",
+    title: "This Man With Elephant Foot Support, Help Him Get Surgery",
     author: "By Krishna Prasad",
     image: "https://dkprodimages.gumlet.io/campaign/cover/Help-Krishna-Prasad1317770230.jpg?format=webp&w=360&dpr=1.3",
     totalRaised: "₹1,04,960",
@@ -40,16 +40,16 @@ const emergencyData = [
 
 export default function MedicalEmergency() {
   return (
-    <div className='flex flex-col gap-2 '>
+    <div className='flex flex-col gap-2  '>
       <div className='flex items-center justify-between'>
-        <div className="section-header md:ml-24  ">
+        <div className="section-header xl:ml-24 ml-28 ">
           <div className="section-straight"></div>
           <p className="section-head">Medical Emergency</p>
         </div>
         <Link className="view-all-link" to="/clinic">View All →</Link> 
       </div>
       
-      <div className='flex cardcont md:gap-10 justify-center items-center '> 
+      <div className='flex cardcont xl:gap-10 justify-center items-center '> 
         {emergencyData.map((emergency) => (
           <div className="emergency-card" key={emergency.id}>
             <div className="emergency-card_mainSection">

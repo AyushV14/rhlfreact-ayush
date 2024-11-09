@@ -162,18 +162,16 @@
     background: #fff;
 }
 
-
 @media (max-width: 768px) {
     .cardcont {
         overflow-x: auto; /* Enable horizontal scrolling */
         padding: 0 16px; /* Optional padding for aesthetics */
-        
     }
 
     .emergency-card {
         max-width: 350px; /* Reduce card width */
         flex: 0 0 auto; /* Prevent the card from shrinking */
-        margin: 0 10px; /* Add horizontal margin */
+        margin: 0 0px; /* Add horizontal margin */
     }
 
     .emergency-card_image {
@@ -213,6 +211,7 @@
         margin-right: 120px;
         margin-bottom: 20px;
     }
+
 }
 @media (max-width: 768px) {
     .emergency-card {

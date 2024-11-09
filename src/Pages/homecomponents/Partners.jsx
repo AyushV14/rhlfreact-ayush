@@ -24,7 +24,7 @@ export default function Partners() {
 
   return (
     <div className='flex flex-col items-center justify-center'>
-      <h2 className='font-[550] text-[22px]'>Our Partners</h2>
+      <h2 className='font-[550] text-[22px] '>Our Partners</h2>
       <div className='marquee-container'>
         <div className='marquee mt-10'>
           {/* First set of logos */}
