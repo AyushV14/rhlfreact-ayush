@@ -5,7 +5,6 @@ import social1 from "../../assets/images/Causes/social/social1.png";
 import social2 from "../../assets/images/Causes/social/social2.png";
 import Clinic from "../Clinic";
 
-// Define categories with icons
 const categories = [
   { id: 1, name: "Urgent", icon: "🔆" },
   { id: 2, name: "Animals", icon: "🐾" },
@@ -23,146 +22,19 @@ const categories = [
   { id: 14, name: "men", icon: "👩" },
 ];
 
-// Sample data for campaigns with different categories and images
 const campaigns = [
-  // Urgent category
-  {
-    id: 1,
-    title: "Flood Relief Fund",
-    author: "By Disaster Relief Org",
-    totalRaised: "₹1,04,960",
-    totalRequired: "₹2,500,000",
-    backers: 114,
-    progress: "4%",
-    category: "Urgent",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 2,
-    title: "Emergency Medical Aid",
-    author: "By Health Aid",
-    totalRaised: "₹1,04,960",
-    totalRequired: "₹2,500,000",
-    backers: 114,
-    progress: "4%",
-    category: "Urgent",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 3,
-    title: "Urgent Shelter for Homeless",
-    author: "By Shelter Foundation",
-    totalRaised: "₹1,04,960",
-    totalRequired: "₹2,500,000",
-    backers: 114,
-    progress: "4%",
-    category: "Urgent",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 4,
-    title: "Critical Food Supplies",
-    author: "By Hunger Relief",
-    totalRaised: "₹1,04,960",
-    totalRequired: "₹2,500,000",
-    backers: 114,
-    progress: "4%",
-    category: "Urgent",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 5,
-    title: "Winter Clothing Drive",
-    author: "By Warmth Project",
-    totalRaised: "₹1,04,960",
-    totalRequired: "₹2,500,000",
-    backers: 114,
-    progress: "4%",
-    category: "Urgent",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 6,
-    title: "Fire Recovery Fund",
-    author: "By Fire Relief Org",
-    totalRaised: "₹1,04,960",
-    totalRequired: "₹2,500,000",
-    backers: 114,
-    progress: "4%",
-    category: "Urgent",
-    image: "https://via.placeholder.com/150",
-  },
-
-  // Animals category
-  {
-    id: 7,
-    title: "Help Abandoned Dogs",
-    author: "By Animal Rescue",
-    totalRaised: "₹1,04,960",
-    totalRequired: "₹2,500,000",
-    backers: 114,
-    progress: "4%",
-    category: "Animals",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 8,
-    title: "Save Injured Wildlife",
-    author: "By Wildlife Care",
-    totalRaised: "₹1,04,960",
-    totalRequired: "₹2,500,000",
-    backers: 114,
-    progress: "4%",
-    category: "Animals",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 9,
-    title: "Stray Cat Shelter",
-    author: "By Pet Haven",
-    totalRaised: "₹1,04,960",
-    totalRequired: "₹2,500,000",
-    backers: 114,
-    progress: "4%",
-    category: "Animals",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 10,
-    title: "Animal Vaccination Drive",
-    author: "By Health for Pets",
-    totalRaised: "₹1,04,960",
-    totalRequired: "₹2,500,000",
-    backers: 114,
-    progress: "4%",
-    category: "Animals",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 11,
-    title: "Feed Stray Animals",
-    author: "By By Food for Pets",
-    totalRaised: "₹1,04,960",
-    totalRequired: "₹2,500,000",
-    backers: 114,
-    progress: "4%",
-    category: "Animals",
-    image: "https://via.placeholder.com/150",
-  },
-  {
-    id: 12,
-    title: "Rescue Farm Animals",
-    author: "By Farm Friend Org",
-    totalRaised: "₹1,04,960",
-    totalRequired: "₹2,500,000",
-    backers: 114,
-    progress: "4%",
-    category: "Animals",
-    image: "https://via.placeholder.com/150",
-  },
-
-  // Continue adding 6 sample campaigns for each category with different images
-  // ...
+  { id: 1, title: "Flood Relief Fund", author: "By Disaster Relief Org", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Urgent", image: "https://via.placeholder.com/150" },
+  { id: 2, title: "Emergency Medical Aid", author: "By Health Aid", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Urgent", image: "https://via.placeholder.com/150" },
+  { id: 3, title: "Urgent Shelter for Homeless", author: "By Shelter Foundation", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Urgent", image: "https://via.placeholder.com/150" },
+  { id: 4, title: "Critical Food Supplies", author: "By Hunger Relief", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Urgent", image: "https://via.placeholder.com/150" },
+  { id: 5, title: "Winter Clothing Drive", author: "By Warmth Project", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Urgent", image: "https://via.placeholder.com/150" },
+  { id: 6, title: "Fire Recovery Fund", author: "By Fire Relief Org", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Urgent", image: "https://via.placeholder.com/150" },
+  { id: 7, title: "Help Abandoned Dogs", author: "By Animal Rescue", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Animals", image: "https://via.placeholder.com/150" },
+  { id: 8, title: "Save Injured Wildlife", author: "By Wildlife Care", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Animals", image: "https://via.placeholder.com/150" },
+  { id: 9, title: "Stray Cat Shelter", author: "By Pet Haven", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Animals", image: "https://via.placeholder.com/150" },
+  { id: 10, title: "Animal Vaccination Drive", author: "By Health for Pets", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Animals", image: "https://via.placeholder.com/150" },
+  { id: 11, title: "Feed Stray Animals", author: "By Food for Pets", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Animals", image: "https://via.placeholder.com/150" },
+  { id: 12, title: "Rescue Farm Animals", author: "By Farm Friend Org", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Animals", image: "https://via.placeholder.com/150" },
 ];
 
 function CategorySection() {
@@ -170,66 +42,24 @@ function CategorySection() {
     campaigns.filter((item) => item.category === "Urgent")
   );
 
+  console.log(selectedCategory);
+  
+
   const filterType = (category) => {
     setSelectedCategory(campaigns.filter((item) => item.category === category));
   };
 
   return (
-    // <div className="px-[100px] font-sans bg-blue-50 min-h-screen">
-    //   {/* Category Filter Section */}
-    //   <div className="flex gap-3 mb-8 justify-center">
-    //     {categories.map((category) => (
-    //       <button
-    //         key={category.id}
-    //         onClick={() => filterType(category.name)}
-    //         className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center justify-center ${
-    //           selectedCategory.length && selectedCategory[0].category === category.name
-    //             ? 'bg-orange-500 text-white'
-    //             : 'bg-gray-200 text-gray-700'
-    //         }`}
-    //       >
-    //         {category.icon} {category.name}
-    //       </button>
-    //     ))}
-    //   </div>
-
-    //   {/* Campaign Cards Section */}
-    //   <div className="flex flex-wrap justify-center gap-6">
-    //     {selectedCategory.map((campaign) => (
-    //       <div
-    //         key={campaign.id}
-    //         className="bg-white p-4 rounded-lg shadow-lg border border-gray-200 flex flex-col items-center w-full sm:w-1/2 lg:w-1/3"
-    //       >
-    //         <img
-    //           src={campaign.image}
-    //           alt={campaign.title}
-    //           className="w-full h-40 object-cover rounded-md mb-4"
-    //         />
-    //         <h3 className="text-lg font-semibold text-center mb-2">{campaign.title}</h3>
-    //         <p className="text-sm text-gray-600 mb-2 text-center">By {campaign.author}</p>
-    //         <p className="text-sm font-medium text-gray-800 text-center">
-    //           <span className="font-bold">{campaign.raised}</span> Raised
-    //         </p>
-    //         <p className="text-sm font-medium text-gray-800 text-center mb-4">
-    //           <span className="font-bold">{campaign.backers}</span> Backers
-    //         </p>
-    //         <button className="w-full py-2 px-4 bg-orange-500 text-white rounded-md font-semibold hover:bg-orange-600">
-    //           Donate Now
-    //         </button>
-    //       </div>
-    //     ))}
-    //   </div>
-    // </div>
-    <div className="flex flex-col gap-2 w-screen content-center overflow-hidden">
+    <div className="flex flex-col gap-2 w-screen content-center overflow-hidden maindiv">
       <div className='flex items-center justify-between'>
-        <div className="section-header md:ml-24  ">
+        <div className="section-header-category lg:ml-24">
           <div className="section-straight"></div>
           <p className="section-head">Categories</p>
         </div>
-        <Link className="view-all-link" to="/clinic">View All →</Link> 
+        <Link className="view-all-link-category" to="/clinic">View All →</Link>
       </div>
 
-      <div className="flex overflow-x-auto gap-6 pb-4 w-[85%] ml-[7%]">
+      <div className="flex overflow-x-auto gap-6 pb-4 w-[85%] ml-[7%] scrollbar ">
         {categories.map((category) => (
           <div
             key={category.id}
@@ -237,38 +67,18 @@ function CategorySection() {
             className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center justify-center ${
               selectedCategory.length &&
               selectedCategory[0].category === category.name
-                ? "bg-orange-500 text-white"
+                ? "bg-pink-500 text-white"
                 : "bg-gray-200 text-gray-700"
             }`}
-            style={{ minWidth: "auto", flexShrink: 0 }} // Ensure each category div expands with content
+            style={{ minWidth: "auto", flexShrink: 0 }}
           >
             {category.icon} {category.name}
           </div>
         ))}
       </div>
 
-      {/* <div className="flex overflow-x-auto gap-6 pb-4 w-[90%] mx-auto">
-        {categories.map((category) => (
-          <div
-            key={category.id}
-            onClick={() => filterType(category.name)}
-            className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center justify-center whitespace-nowrap ${
-              selectedCategory.length &&
-              selectedCategory[0].category === category.name
-                ? "bg-orange-500 text-white"
-                : "bg-gray-200 text-gray-700"
-            }`}
-            style={{ display: "inline-flex" }} // Ensure the width grows based on the text
-          >
-            {category.icon} {category.name}
-          </div>
-        ))}
-      </div> */}
-
-      {/* Emergency Cards Section */}
       <div className="flex flex-wrap justify-center gap-6 w-[95%] mx-auto">
-        {/* Only show 6 cards (2 rows of 3 cards) */}
-        {selectedCategory.slice(0, 6).map((emergency) => (
+        {selectedCategory.slice(0, 3).map((emergency) => (
           <div
             className="emergency-card w-full sm:w-1/2 md:w-1/3 lg:w-1/3"
             key={emergency.id}
@@ -324,8 +134,7 @@ function CategorySection() {
                         width: emergency.progress,
                         height: "8px",
                         borderRadius: "4px",
-                        background:
-                          "linear-gradient(to right, #FF8E00, #FF1F00)",
+                        background: "#EC4899",
                       }}
                     >
                       <div
@@ -341,7 +150,7 @@ function CategorySection() {
                     className="emergency-card_donateButton"
                     href="#"
                     style={{
-                      background: "linear-gradient(to right, #FF8E00, #FF1F00)",
+                      background: "#EC4899",
                       color: "white",
                     }}
                   >

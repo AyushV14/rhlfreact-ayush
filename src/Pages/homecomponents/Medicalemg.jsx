@@ -91,7 +91,7 @@ export default function MedicalEmergency() {
                         width: emergency.progress, 
                         height: '8px', 
                         borderRadius: '4px', 
-                        background: 'linear-gradient(to right, #FF8E00, #FF1F00)' 
+                        background: '#EC4899' 
                       }}
                     >
                       <div className="dk-progress-bar_animatedProgressBar" style={{ borderRadius: '4px' }}></div>
@@ -104,7 +104,7 @@ export default function MedicalEmergency() {
                     className="emergency-card_donateButton"
                     href="#"
                     style={{
-                      background: 'linear-gradient(to right, #FF8E00, #FF1F00)',
+                      background: '#EC4899',
                       color: 'white',
                     }}
                   >

@@ -113,11 +113,16 @@
     align-items: center;
     margin-bottom: 20px;
 }
+.section-header-category {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
 
 .section-straight {
     flex: 0 0 4px;
     height: 25px;
-    background-color: #FF7400;
+    background-color: #EC4899;
     margin-right: 16px;
 }
 
@@ -128,15 +133,27 @@
 }
 
 .view-all-link {
-    color: #FF7400;
+    color: #EC4899;
     text-decoration: none;
     font-weight: 600;
     display: flex;
     align-items: center;
-    
+    margin-right: 70px;
 }
 
 .view-all-link:hover {
+    text-decoration: underline;
+}
+.view-all-link-category {
+    color: #EC4899;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-right: 70px;
+}
+
+.view-all-link-category:hover {
     text-decoration: underline;
 }
 
@@ -164,55 +181,60 @@
 
 @media (max-width: 768px) {
     .cardcont {
-        overflow-x: auto; /* Enable horizontal scrolling */
-        padding: 0 16px; /* Optional padding for aesthetics */
+        display: flex;
+        overflow-x:auto;
+        padding: 0 16px;
+        gap: 10px;
+        justify-content: flex-start;
     }
 
     .emergency-card {
-        max-width: 350px; /* Reduce card width */
-        flex: 0 0 auto; /* Prevent the card from shrinking */
-        margin: 0 0px; /* Add horizontal margin */
+        max-width: 300px;
+        flex: 0 0 auto;
+        margin-right: 10px;
     }
 
     .emergency-card_image {
-        height: 150px; /* Reduce image height */
+        height: 150px;
     }
 
     .emergency-card_title {
-        font-size: 16px; /* Smaller title font size */
+        font-size: 16px;
     }
 
     .emergency-card_author {
-        font-size: 12px; /* Smaller author font size */
+        font-size: 12px;
     }
 
     .emergency-card_statsWrapper {
-        flex-direction: column; /* Stack stats vertically */
-        align-items: flex-start; /* Align stats to the start */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .emergency-card_stats {
-        margin-top: 8px; /* Adjust margin for stats */
+        margin-top: 8px;
     }
 
     .emergency-card_shareButton,
     .emergency-card_donateButton {
-        padding: 8px 20px; /* Reduce padding */
-        font-size: 14px; /* Smaller font size */
+        padding: 8px 20px;
+        font-size: 14px;
     }
 
     .dk-progress-bar_backgroundBar {
-        height: 6px; /* Reduce height of the progress bar */
+        height: 6px;
     }
-    .section-header{
-        margin-left: 100px;
+
+    .section-header {
+        margin-left: 160px;
     }
-    .view-all-link{
+
+    .view-all-link {
         margin-right: 120px;
         margin-bottom: 20px;
     }
-
 }
+
 @media (max-width: 768px) {
     .emergency-card {
         max-width: 300px;          /* Further reduce max-width for mobile */
@@ -220,4 +242,15 @@
     }
 
 
+}
+
+
+@media (max-width:768px){
+    .maindiv{
+        margin-left: 80px;
+    }
+}
+
+.scrollbar::-webkit-scrollbar{
+    height: 13px;
 }

@@ -30,7 +30,7 @@ const campaignData = [
 export default function CampaignCard() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Set an interval to change the card every 3 seconds
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % campaignData.length);

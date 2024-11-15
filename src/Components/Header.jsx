@@ -52,7 +52,7 @@ function Header() {
   };
 
   return (
-    <nav className='w-full px-10 pt-3 max-md:mr-10 max-md:mb-5'>
+    <nav className='w-full px-4 pt-3 max-md:mr-10 max-md:mb-5'>
       <ul className='w-full flex justify-between items-center'>
         <div className='w-[100%] z-10 md:w-1/5 max-md:mr-10'>
           <li><img src={Logo} alt="Logo" className='w-[110px] h-auto max-md:w-24 max-md:h-20' /></li>

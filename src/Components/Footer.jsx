@@ -57,7 +57,7 @@ function Footer() {
         <h3 className='section-title font-bold text-xl max-md:ml-10  '>Quick Links</h3>
         <div className='space-y-2  lg:text-start flex flex-col max-md:ml-1  max-md:
         text-center'>
-          {["Privacy Policy", "Terms & Condition", "Refund Policy", "Child Protection Policy", "Posh Policy", "Employee Login"].map(link => (
+          {["Privacy Policy", "Terms & Condition", "Refund Policy", "Child Protection Policy", "Posh Policy"].map(link => (
             <p className='text-black hover:text-gray-400 transition-colors duration-300 cursor-pointer ' key={link}>
               {link}
             </p>
