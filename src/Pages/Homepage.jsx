@@ -10,6 +10,7 @@ import SearchComp from './homecomponents/SearchComp';
 import ProgramImpact from './homecomponents/ProgramImpact';
 import Assureyou from './homecomponents/Assureyou';
 import Testimonals from './homecomponents/Testimonals';
+import ThreeTab from './homecomponents/ThreeTab';
 
 
 function Homepage() {
@@ -41,6 +42,8 @@ function Homepage() {
         <p>Real Happiness Of Life Foundation for social change and inclusion works for the social</p>
         <p>development and integration of underprivileged individuals, groups, and communities in India.</p>
       </div>
+
+      <ThreeTab/>
 
       <div className="section-header mr-[360px] mt-20 xl:mr-[1180px] ">
           <div className="section-straight"></div>
