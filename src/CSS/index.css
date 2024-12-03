@@ -2,6 +2,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 *{
   margin: 0;
   box-sizing: border-box;
@@ -14,3 +16,4 @@
 html {
   font-size: clamp(12px, 1rem + 1vw, 16px);
 }
+

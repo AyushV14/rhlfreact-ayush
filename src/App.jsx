@@ -1,5 +1,6 @@
 import './CSS/App.css'
-import { Routes,Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
+import { motion } from 'framer-motion';  // Import Framer Motion
 import Layout from './Components/Outlet'
 import Homepage from './Pages/Homepage'
 import Aboutus from './Pages/Aboutus'
@@ -8,20 +9,42 @@ import Getinvolved from './Pages/Getinvolved'
 import Contact from './Pages/Contact'
 import Media from './Pages/Media'
 import Programmes from './Pages/Programmes'
+
 function App() {
   return (
     <Routes>
-      <Route path='/' element={<Layout/>}>
-        <Route exact path='' element={<Homepage/>}/>
-        <Route path='About' element={<Aboutus/>}/>
-        <Route path='Clinic' element={<Clinic/>}/>
-        <Route path='GetInvolved' element={<Getinvolved/>}/>
-        <Route path='Contact' element={<Contact/>}/>
-        <Route path='Media' element={<Media/>}/>
-        <Route path='programmes' element={<Programmes/>}/>
+      <Route path='/' element={<Layout />}>
+        <Route 
+          path='' 
+          element={<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}><Homepage /></motion.div>} 
+        />
+        <Route 
+          path='About' 
+          element={<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}><Aboutus /></motion.div>} 
+        />
+        <Route 
+          path='Clinic' 
+          element={<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}><Clinic /></motion.div>} 
+        />
+        <Route 
+          path='GetInvolved' 
+          element={<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}><Getinvolved /></motion.div>} 
+        />
+        <Route 
+          path='Contact' 
+          element={<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}><Contact /></motion.div>} 
+        />
+        <Route 
+          path='Media' 
+          element={<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}><Media /></motion.div>} 
+        />
+        <Route 
+          path='programmes' 
+          element={<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}><Programmes /></motion.div>} 
+        />
       </Route>
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;

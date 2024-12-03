@@ -28,7 +28,7 @@ export default function Assureyou() {
   return (
     <div className='flex flex-col gap-y-5 justify-center items-center'>
       <h1 className='text-3xl text-black font-semibold'>We <span className='text-pink-500'>assure</span> you that</h1>
-      <div className='flex lg:flex-row sm:flex-col  gap-x-5 lg:max-w-[80%] mt-10'>
+      <div className='flex flex-col lg:flex-row  gap-x-5 lg:max-w-[80%] mt-10'>
         {assurance.map((assure)=>{
           return (
             <div className='flex flex-col gap-y-3 justify-center items-center'> 

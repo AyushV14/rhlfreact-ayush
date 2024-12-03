@@ -22,15 +22,15 @@ function Homepage() {
   };
 
   return (
-    <div className="homepage-container w-full flex flex-col py-8 gap-0 bg-white mt-1 justify-center items-center">
+    <div className=" w-full flex flex-col gap-0 bg-white  justify-center items-center">
       
 
-      <div className="flex flex-col justify-center items-center relative mt-10">
+      <div className="flex flex-col justify-center items-center relative">
         <img src={importImage('mainslider.png')} alt="Homepage" className="w-full " />
         <img
           src={importImage('mealtab.png')}
           alt="Meal Tab"
-          className="w-[60%] mt-[-40px] z-10"
+          className="w-[80%] mt-[-40px]"
         />
       </div>
 
@@ -45,7 +45,7 @@ function Homepage() {
 
       <ThreeTab/>
 
-      <div className="section-header mr-[360px] mt-20 xl:mr-[1180px] ">
+      <div className="section-header mr-[360px] mt-24 xl:mr-[1180px] ">
           <div className="section-straight"></div>
           <p className="section-head">Campaign Details</p>
         </div>
@@ -75,10 +75,10 @@ function Homepage() {
         <Assureyou/>
         <Partners />
         <div className='flex flex-col items-center justify-center gap-6'>
-        <img src={importHomeImage('birthday.jpg')} alt="Homepage" className="xl:w-[600px] xl:h-[800px] sectionimg" />
+        {/* <img src={importHomeImage('birthday.jpg')} alt="Homepage" className="xl:w-[600px] xl:h-[800px] sectionimg" />
         <img src={importHomeImage('stories.jpg')} alt="Homepage" className="xl:w-[600px] xl:h-[800px] sectionimg" />
         {/* <img src={importHomeImage('assurance.jpg')} alt="Homepage" className="xl:w-[500px] xl:h-[900px] sectionimg" /> */}
-        <img src={importHomeImage('live-donate.jpg')} alt="Homepage" className="xl:w-[600px] xl:h-[800px] sectionimg" />
+        {/*<img src={importHomeImage('live-donate.jpg')} alt="Homepage" className="xl:w-[600px] xl:h-[800px] sectionimg" /> */}
         </div>
         
       </div>
