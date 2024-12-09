@@ -5,6 +5,7 @@ import campaignimg2 from '../../assets/images/campaignimg2.png';
 import campaignimg3 from '../../assets/images/campaignimg3.png';
 import lady from '../../assets/images/svg/lady/lady.png'; 
 import connect from '../../assets/images/svg/lady/connect.png'; 
+import { Link } from 'react-router-dom';
 
 const campaignData = [
   {
@@ -95,9 +96,11 @@ export default function CampaignCard() {
                 <p className="text-gray-600 text-xs mb-0">{campaign.description}</p>
                 </div>
                 {/* Donate Button */}
+                <Link to={`/donate/1`}>
                 <button className="donate-btn w-1/3 px-6">
                   Donate Now
                 </button>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,14 +1,15 @@
-import './CSS/App.css'
-import { Routes, Route } from 'react-router-dom'
-import { motion } from 'framer-motion';  // Import Framer Motion
-import Layout from './Components/Outlet'
-import Homepage from './Pages/Homepage'
-import Aboutus from './Pages/Aboutus'
-import Clinic from './Pages/Clinic'
-import Getinvolved from './Pages/Getinvolved'
-import Contact from './Pages/Contact'
-import Media from './Pages/Media'
-import Programmes from './Pages/Programmes'
+import './CSS/App.css';
+import { Routes, Route } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import Layout from './Components/Outlet';
+import Homepage from './Pages/Homepage';
+import Aboutus from './Pages/Aboutus';
+import Clinic from './Pages/Clinic';
+import Getinvolved from './Pages/Getinvolved';
+import Contact from './Pages/Contact';
+import Media from './Pages/Media';
+import Programmes from './Pages/Programmes';
+import CardDetails from './Pages/CardDetails'; // Import the new CardDetails page
 
 function App() {
   return (
@@ -41,6 +42,11 @@ function App() {
         <Route 
           path='programmes' 
           element={<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}><Programmes /></motion.div>} 
+        />
+        {/* Dynamic Route for Card Details */}
+        <Route 
+          path='donate/:id' 
+          element={<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}><CardDetails /></motion.div>} 
         />
       </Route>
     </Routes>

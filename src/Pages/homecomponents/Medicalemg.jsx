@@ -40,7 +40,7 @@ const emergencyData = [
 
 export default function MedicalEmergency() {
   return (
-    <div className='flex flex-col gap-2  '>
+    <div className='flex flex-col gap-2'>
       <div className='flex items-center justify-between'>
         <div className="section-header xl:ml-24 ml-28 ">
           <div className="section-straight"></div>
@@ -100,16 +100,16 @@ export default function MedicalEmergency() {
                 </div>
                 <div className="emergency-card_buttonSection">
                   <button className="emergency-card_shareButton">Share</button>
-                  <a
+                  <Link
+                    to={`/donate/${emergency.id}`} // Updated link
                     className="emergency-card_donateButton"
-                    href="#"
                     style={{
                       background: '#EC4899',
                       color: 'white',
                     }}
                   >
                     Donate Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

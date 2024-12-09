@@ -6,35 +6,35 @@ import social2 from "../../assets/images/Causes/social/social2.png";
 import Clinic from "../Clinic";
 
 const categories = [
-  { id: 1, name: "Urgent", icon: "🔆" },
-  { id: 2, name: "Animals", icon: "🐾" },
-  { id: 3, name: "Children", icon: "👶" },
-  { id: 4, name: "Elderly", icon: "👵" },
-  { id: 5, name: "Faith", icon: "🙏" },
-  { id: 6, name: "Disaster-Relief", icon: "🛠️" },
-  { id: 7, name: "Hunger", icon: "🍴" },
-  { id: 8, name: "Education", icon: "🎓" },
-  { id: 9, name: "Women", icon: "👩" },
-  { id: 10, name: "safa", icon: "🙏" },
-  { id: 11, name: "ter-Relief", icon: "🛠️" },
-  { id: 12, name: "nger", icon: "🍴" },
-  { id: 13, name: "ucation", icon: "🎓" },
-  { id: 14, name: "men", icon: "👩" },
+  { id: 4, name: "Urgent", icon: "🔆" },
+  { id: 5, name: "Animals", icon: "🐾" },
+  { id: 6, name: "Children", icon: "👶" },
+  { id: 7, name: "Elderly", icon: "👵" },
+  { id: 8, name: "Faith", icon: "🙏" },
+  { id: 9, name: "Disaster-Relief", icon: "🛠️" },
+  { id: 10, name: "Hunger", icon: "🍴" },
+  { id: 11, name: "Education", icon: "🎓" },
+  { id: 12, name: "Women", icon: "👩" },
+  { id: 13, name: "safa", icon: "🙏" },
+  { id: 14, name: "ter-Relief", icon: "🛠️" },
+  { id: 15, name: "nger", icon: "🍴" },
+  { id: 16, name: "ucation", icon: "🎓" },
+  { id: 17, name: "men", icon: "👩" },
 ];
 
 const campaigns = [
-  { id: 1, title: "Flood Relief Fund", author: "By Disaster Relief Org", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Urgent", image: "https://via.placeholder.com/150" },
-  { id: 2, title: "Emergency Medical Aid", author: "By Health Aid", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Urgent", image: "https://via.placeholder.com/150" },
-  { id: 3, title: "Urgent Shelter for Homeless", author: "By Shelter Foundation", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Urgent", image: "https://via.placeholder.com/150" },
-  { id: 4, title: "Critical Food Supplies", author: "By Hunger Relief", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Urgent", image: "https://via.placeholder.com/150" },
-  { id: 5, title: "Winter Clothing Drive", author: "By Warmth Project", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Urgent", image: "https://via.placeholder.com/150" },
-  { id: 6, title: "Fire Recovery Fund", author: "By Fire Relief Org", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Urgent", image: "https://via.placeholder.com/150" },
-  { id: 7, title: "Help Abandoned Dogs", author: "By Animal Rescue", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Animals", image: "https://via.placeholder.com/150" },
-  { id: 8, title: "Save Injured Wildlife", author: "By Wildlife Care", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Animals", image: "https://via.placeholder.com/150" },
-  { id: 9, title: "Stray Cat Shelter", author: "By Pet Haven", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Animals", image: "https://via.placeholder.com/150" },
-  { id: 10, title: "Animal Vaccination Drive", author: "By Health for Pets", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Animals", image: "https://via.placeholder.com/150" },
-  { id: 11, title: "Feed Stray Animals", author: "By Food for Pets", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Animals", image: "https://via.placeholder.com/150" },
-  { id: 12, title: "Rescue Farm Animals", author: "By Farm Friend Org", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Animals", image: "https://via.placeholder.com/150" },
+  { id: 4, title: "Flood Relief Fund", author: "By Disaster Relief Org", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Urgent", image: "https://via.placeholder.com/150" },
+  { id: 5, title: "Emergency Medical Aid", author: "By Health Aid", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Urgent", image: "https://via.placeholder.com/150" },
+  { id: 6, title: "Urgent Shelter for Homeless", author: "By Shelter Foundation", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Urgent", image: "https://via.placeholder.com/150" },
+  { id: 7, title: "Critical Food Supplies", author: "By Hunger Relief", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Urgent", image: "https://via.placeholder.com/150" },
+  { id: 8, title: "Winter Clothing Drive", author: "By Warmth Project", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Urgent", image: "https://via.placeholder.com/150" },
+  { id: 9, title: "Fire Recovery Fund", author: "By Fire Relief Org", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Urgent", image: "https://via.placeholder.com/150" },
+  { id: 10, title: "Help Abandoned Dogs", author: "By Animal Rescue", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Animals", image: "https://via.placeholder.com/150" },
+  { id: 11, title: "Save Injured Wildlife", author: "By Wildlife Care", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Animals", image: "https://via.placeholder.com/150" },
+  { id: 12, title: "Stray Cat Shelter", author: "By Pet Haven", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Animals", image: "https://via.placeholder.com/150" },
+  { id: 13, title: "Animal Vaccination Drive", author: "By Health for Pets", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Animals", image: "https://via.placeholder.com/150" },
+  { id: 14, title: "Feed Stray Animals", author: "By Food for Pets", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Animals", image: "https://via.placeholder.com/150" },
+  { id: 15, title: "Rescue Farm Animals", author: "By Farm Friend Org", totalRaised: "₹1,04,960", totalRequired: "₹2,500,000", backers: 114, progress: "4%", category: "Animals", image: "https://via.placeholder.com/150" },
 ];
 
 function CategorySection() {
@@ -146,7 +146,8 @@ function CategorySection() {
                 </div>
                 <div className="emergency-card_buttonSection">
                   <button className="emergency-card_shareButton">Share</button>
-                  <a
+                  <Link
+                  to={`/donate/${emergency.id}`}
                     className="emergency-card_donateButton"
                     href="#"
                     style={{
@@ -155,7 +156,7 @@ function CategorySection() {
                     }}
                   >
                     Donate Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
