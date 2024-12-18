@@ -11,6 +11,7 @@ import ProgramImpact from './homecomponents/ProgramImpact';
 import Assureyou from './homecomponents/Assureyou';
 import Testimonals from './homecomponents/Testimonals';
 import ThreeTab from './homecomponents/ThreeTab';
+import Hero from './homecomponents/Hero';
 
 
 function Homepage() {
@@ -24,15 +25,15 @@ function Homepage() {
   return (
     <div className=" w-full flex flex-col gap-0 bg-white  justify-center items-center">
       
-
-      <div className="flex flex-col justify-center items-center relative">
+      {/* <Hero/> */}
+      {/* <div className="flex flex-col justify-center items-center relative">
         <img src={importImage('mainslider.png')} alt="Homepage" className="w-full " />
         <img
           src={importImage('mealtab.png')}
           alt="Meal Tab"
           className="w-[80%] mt-[-40px]"
         />
-      </div>
+      </div> */}
 
       <h1 className="heading text-5xl text-center font-light mt-8">
         <span className="text-gray-700 font-medium">Together</span> We Make a <span className="text-black font-bold">Difference</span>
@@ -45,7 +46,7 @@ function Homepage() {
 
       <ThreeTab/>
 
-      <div className="section-header mr-[360px] mt-24 xl:mr-[1180px] ">
+      <div className="section-header mr-[360px] mt-10 md:mt-44 xl:mr-[1180px] ">
           <div className="section-straight"></div>
           <p className="section-head">Campaign Details</p>
         </div>

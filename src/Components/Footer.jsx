@@ -54,16 +54,28 @@ function Footer() {
       </div>
 
       <div className="section-3 text-start">
-        <h3 className='section-title font-bold text-xl max-md:ml-10  '>Quick Links</h3>
-        <div className='space-y-2  lg:text-start flex flex-col max-md:ml-1  max-md:
-        text-center'>
-          {["Privacy Policy", "Terms & Condition", "Refund Policy", "Child Protection Policy", "Posh Policy"].map(link => (
-            <p className='text-black hover:text-gray-400 transition-colors duration-300 cursor-pointer ' key={link}>
-              {link}
-            </p>
-          ))}
+      <h3 className='section-title font-bold text-xl max-md:ml-10'>Quick Links</h3>
+      <div className='space-y-2 lg:text-start flex flex-col max-md:ml-1 max-md:text-center'>
+            {[
+              { name: "Privacy Policy", path: "/PrivacyPolicy" },
+              { name: "Terms & Condition", path: "/TermsCondotions" },
+              { name: "Refund Policy", path: "/RefundPolicy" },
+              { name: "Child Protection Policy", path: "/ChildProtection" },
+              { name: "Posh Policy", path: "/PoshPolicy" }
+            ].map(link => (
+              <a 
+                href={link.path} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                key={link.name}
+                className='text-black hover:text-gray-400 transition-colors duration-300 cursor-pointer'
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
+
 
       <div className="subscribe-form">
         <h3 className='section-title font-bold text-xl  '>Keep Helping Stay Updated.</h3>

@@ -8,36 +8,39 @@ import hand from '../../assets/images/3tabs/hand.png';
 const ThreeTab = () => {
   return (
     <div 
-      className="flex justify-center mt-20 w-full h-[60vh]" 
+      className="flex flex-col justify-between items-center mt-20 w-full h-[60vh] relative"
       style={{ backgroundImage: `url(${kakhagImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-    >
-      <div className='flex flex-col items-center '>
-        <div className='flex flex-col md:flex-row md:gap-x-10  '>
-          <a href="/programmes">
-          <div className='flex gap-x-3 p-2 bg-white rounded-md max-w-40 cursor-pointer  '>
-            <img src={donate} alt=""  className='w-24 h-16'/>
-            <p>i want to <span className='font-bold'>Donate</span></p>
+    > 
+    
+      <div className='flex flex-row items-start justify-center p-2 md:p-0 gap-x-4'>
+        <div className=' w-auto md:w-44 h-auto md:h-[85px] bg-white shadow-md cursor-pointer p-4 md:p-3 rounded-xl hover:scale-105 transition-all '>
+        <a href="/programmes">
+          <div className='flex flex-row items-center justify-center gap-x-4'>
+            <img src={donate} alt='donate' className='w-10 h-10'/>
+            <p className='text-md  text-gray-600'>I want to <span className='text-black font-semibold'>Donate</span></p>
           </div>
-          </a>
-          <div className='bg-[#1B1B1B] rounded-md p-3 flex flex-col gap-y-2 text-white text-base max-w-[180px]'> 
-            <div className='flex gap-x-3'>
-              <img src={hand} alt="" className='w-[35px] h-[45px]' />
-              <p className='font-normal '>I want to <span className='font-bold'>Volunteer</span></p>
-            </div>
-            <div>
-              <p className='font-light'>Spread smiles by investing your time</p>
-            </div>
-          </div>
-          <a href="/contact">
-          <div className='flex gap-x-3 p-2 bg-white rounded-md max-w-40 cursor-pointer'>
-            <img src={touch} alt="" className='w-14 h-12'/>
-            <p>Get in <span className='font-bold'>Touch</span></p>
-          </div>
-          </a>
+        </a>
         </div>
-        <img src={children} alt=" " className='w-full h-[35%] md:h-[80%] mt-[30px] md:mt-[10px]' />
-      </div>
+        <div className=' w-auto md:w-44 h-auto bg-black shadow-md p-5 rounded-xl cursor-pointer hover:scale-105 transition-all text-white '>
+            <div className='flex flex-col items-center justify-center gap-y-2'>
+              <div className='flex flex-row items-center justify-center gap-x-4'>
+                  <img src={hand} alt='donate' className='w-8 h-8'/>
+                  <p className='text-md text-gray-200'>I want to <span className='text-white font-semibold'>Volunteer</span></p>
+              </div>
+              <p className='text-md text-white font-light text-sm'>Spread smiles by investing your time</p>
 
+            </div>
+        </div>
+        <a href="/contact">
+        <div className=' w-auto md:w-44 h-auto bg-white shadow-md p-5 rounded-xl cursor-pointer hover:scale-105 transition-all ' >
+            <div className='flex flex-row items-center justify-center gap-x-4'>
+                <img src={touch} alt='donate' className='w-8 h-8'/>
+                <p className='text-md text-gray-600'>Get in <span className='text-black font-semibold'>Touch</span></p>
+              </div>
+        </div>
+        </a>
+      </div>
+      <img src={children} alt='children' className='w-full object-contain mt-10 h-[90%]' />
     </div>
   );
 };
