@@ -10,6 +10,9 @@ import Contact from './Pages/Contact';
 import Media from './Pages/Media';
 import Programmes from './Pages/Programmes';
 import CardDetails from './Pages/CardDetails'; // Import the new CardDetails page
+import TermsAndConditions from './Pages/QuickLinksComponents/TermsConditions';
+import RefundPolicy from './Pages/QuickLinksComponents/RefundPolicy';
+import PrivacyPolicy from './Pages/QuickLinksComponents/PrivacyPolicy';
 
 function App() {
   return (
@@ -48,8 +51,10 @@ function App() {
           path='donate/:id' 
           element={<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}><CardDetails /></motion.div>} 
         />
-      </Route>
-    </Routes>
+        <Route path="/termsAndCondition" element={<TermsAndConditions />} />
+        <Route path='/RefundPolicy' element={<RefundPolicy/>}/>
+        <Route path='/privacyPolicy' element={<PrivacyPolicy/>}/>
+        </Route></Routes>
   );
 }
 
