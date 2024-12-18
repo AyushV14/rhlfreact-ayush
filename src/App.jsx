@@ -10,15 +10,9 @@ import Contact from './Pages/Contact';
 import Media from './Pages/Media';
 import Programmes from './Pages/Programmes';
 import CardDetails from './Pages/CardDetails'; // Import the new CardDetails page
-import PrivacyPolicy from './Pages/footer_components/PrivacyPolicy'
-import TermsCondotions from './Pages/footer_components/TermsCondotions'
-import RefundPolicy from './Pages/footer_components/RefundPolicy'
-import PoshPolicy from './Pages/footer_components/PoshPolicy'
-import ChildProtection from './Pages/footer_components/ChildProtection'
-
-
-        
-        
+import TermsAndConditions from './Pages/QuickLinksComponents/TermsConditions';
+import RefundPolicy from './Pages/QuickLinksComponents/RefundPolicy';
+import PrivacyPolicy from './Pages/QuickLinksComponents/PrivacyPolicy';
 
 function App() {
   return (
@@ -57,36 +51,10 @@ function App() {
           path='donate/:id' 
           element={<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}><CardDetails /></motion.div>} 
         />
-        <Route 
-          path='PrivacyPolicy' 
-          element={<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}><PrivacyPolicy /></motion.div>} 
-          
-        />
-        <Route 
-          path='TermsCondotions' 
-          element={<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}><TermsCondotions /></motion.div>} 
-          
-        />
-        <Route 
-          path='RefundPolicy' 
-          element={<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}><RefundPolicy /></motion.div>} 
-          
-        />
-        <Route 
-          path='PoshPolicy' 
-          element={<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}><PoshPolicy /></motion.div>} 
-          
-        />
-        
-        <Route 
-          path='ChildProtection' 
-          element={<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}><ChildProtection /></motion.div>} 
-          
-        />
-        
-        
-      </Route>
-    </Routes>
+        <Route path="/termsAndCondition" element={<TermsAndConditions />} />
+        <Route path='/RefundPolicy' element={<RefundPolicy/>}/>
+        <Route path='/privacyPolicy' element={<PrivacyPolicy/>}/>
+        </Route></Routes>
   );
 }
 

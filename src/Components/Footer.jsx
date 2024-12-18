@@ -7,6 +7,9 @@ import visa from '../assets/images/visa.svg';
 import secures from '../assets/images/securelogo.svg';
 import americanexpress from '../assets/images/Americanexpresslogo.jpeg';
 import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram, FaLinkedin } from 'react-icons/fa';
+//import Child_Protection_Policy from '../Pages/QuickLinksComponents/ChildProtectionPolicy'
+//import POSH_at_workplace from '../assets/POSH_at_workplace.pdf';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -54,28 +57,27 @@ function Footer() {
       </div>
 
       <div className="section-3 text-start">
-      <h3 className='section-title font-bold text-xl max-md:ml-10'>Quick Links</h3>
-      <div className='space-y-2 lg:text-start flex flex-col max-md:ml-1 max-md:text-center'>
-            {[
-              { name: "Privacy Policy", path: "/PrivacyPolicy" },
-              { name: "Terms & Condition", path: "/TermsCondotions" },
-              { name: "Refund Policy", path: "/RefundPolicy" },
-              { name: "Child Protection Policy", path: "/ChildProtection" },
-              { name: "Posh Policy", path: "/PoshPolicy" }
-            ].map(link => (
-              <a 
-                href={link.path} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                key={link.name}
-                className='text-black hover:text-gray-400 transition-colors duration-300 cursor-pointer'
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
+        <h3 className='section-title font-bold text-xl max-md:ml-10  '>Quick Links</h3>
+        <div className='space-y-2  lg:text-start flex flex-col max-md:ml-1  max-md:
+        text-center'>
+          <Link to="/privacyPolicy" className='text-black hover:text-gray-400 transition-colors duration-300 cursor-pointer'>
+            Privacy Policy
+          </Link>
+          <Link to="/termsAndCondition" className='text-black hover:text-gray-400 transition-colors duration-300 cursor-pointer'>
+            Terms & Condition
+          </Link>
+          <Link to="/RefundPolicy" className='text-black hover:text-gray-400 transition-colors duration-300 cursor-pointer'>
+            Refund Policy
+          </Link>
+          <a href="/Child_Protection_Policy.pdf" target="_blank" rel="noopener noreferrer" className='text-black hover:text-gray-400 transition-colors duration-300 cursor-pointer'>
+            Child Protection Policy
+          </a>
+          <a href="/POSH_at_workplace.pdf" target="_blank" rel="noopener noreferrer" className='text-black hover:text-gray-400 transition-colors duration-300 cursor-pointer'>
+            Posh Policy
+          </a>
+          
         </div>
-
+      </div>
 
       <div className="subscribe-form">
         <h3 className='section-title font-bold text-xl  '>Keep Helping Stay Updated.</h3>
