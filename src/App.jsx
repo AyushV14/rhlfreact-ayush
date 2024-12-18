@@ -13,6 +13,7 @@ import CardDetails from './Pages/CardDetails'; // Import the new CardDetails pag
 import TermsAndConditions from './Pages/QuickLinksComponents/TermsConditions';
 import RefundPolicy from './Pages/QuickLinksComponents/RefundPolicy';
 import PrivacyPolicy from './Pages/QuickLinksComponents/PrivacyPolicy';
+import DonorList from './Pages/Donorlist';
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
         <Route path="/termsAndCondition" element={<TermsAndConditions />} />
         <Route path='/RefundPolicy' element={<RefundPolicy/>}/>
         <Route path='/privacyPolicy' element={<PrivacyPolicy/>}/>
+        <Route path='/Donorlist' element={<DonorList/>}/>
         </Route></Routes>
   );
 }
